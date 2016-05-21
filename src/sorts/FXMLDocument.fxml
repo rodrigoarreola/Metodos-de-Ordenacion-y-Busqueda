@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="402.0" prefWidth="282.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sorts.FXMLDocumentController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="282.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openFile" text="Abrir Archivo" />
+                  <MenuItem mnemonicParsing="false" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ordenación">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Burbuja" />
+                  <MenuItem mnemonicParsing="false" text="Inserción" />
+                  <MenuItem mnemonicParsing="false" text="QuickSort" />
+                  <MenuItem mnemonicParsing="false" text="Selección Directa" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Búsqueda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Secuencial" />
+                  <MenuItem mnemonicParsing="false" text="Binaria" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Créditos" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TextArea fx:id="txtDisplay" editable="false" layoutX="21.0" layoutY="44.0" prefHeight="264.0" prefWidth="111.0" />
+      <TextArea editable="false" layoutX="157.0" layoutY="44.0" prefHeight="264.0" prefWidth="111.0" />
+      <Label layoutX="21.0" layoutY="318.0" text="Tipo de Dato:" />
+      <Label fx:id="labelTDato" layoutX="104.0" layoutY="318.0" prefHeight="17.0" prefWidth="72.0" />
+   </children>
+</AnchorPane>
