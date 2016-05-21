@@ -10,6 +10,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,7 +29,7 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML TextArea txtDisplay; 
     @FXML Label labelTDato;
-    
+    ArrayList<String[]> datos=new ArrayList<String[]>();
     
     @FXML   public void openFile(){
         txtDisplay.setText("");
@@ -47,15 +49,14 @@ public class FXMLDocumentController implements Initializable {
             String cadena;
             while ((cadena = br.readLine()) != null) {
                 txtDisplay.setText(txtDisplay.getText()+cadena+"\n");
-                //System.out.println(cadena+"\n");
-            
-                String arreglo[] = cadena.split(" ");
-                for (int i=0; i < arreglo.length; i++){
-                    System.out.println("Arreglo en la posicion["+i+"]: "+arreglo[i]);
-                }
                 
-                
+                datos.add(cadena.trim().split("\n"));
             }
+            for (int i=0; i < datos.size(); i++){
+                    //System.out.println(i);
+                    System.out.println("Arreglo en la posicion["+i+"]: "+Arrays.toString(datos.get(i)));
+            }            
+
         } catch (IOException e) {
                 e.printStackTrace();
         }
