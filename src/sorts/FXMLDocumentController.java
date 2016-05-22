@@ -412,6 +412,7 @@ public class FXMLDocumentController implements Initializable {
             return -1;
     }
     
+    //Comentario de testeo
     public int busquedaF(float aux){
             indiceInicial=0;
             indiceFinal = enteros.size()-1;//arreglo.length-1;
