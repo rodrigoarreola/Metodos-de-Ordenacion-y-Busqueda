@@ -413,6 +413,7 @@ public class FXMLDocumentController implements Initializable {
     }
     
     public int busquedaF(float aux){
+        //cambios en busqueda float
             indiceInicial=0;
             indiceFinal = enteros.size()-1;//arreglo.length-1;
             if (aux < enteros.get(indiceInicial) || aux > enteros.get(indiceFinal)) {
