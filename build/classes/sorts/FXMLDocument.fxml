@@ -18,16 +18,17 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Ordenación">
             <items>
-              <MenuItem mnemonicParsing="false" text="Burbuja" />
-                  <MenuItem mnemonicParsing="false" text="Inserción" />
-                  <MenuItem mnemonicParsing="false" text="QuickSort" />
-                  <MenuItem mnemonicParsing="false" text="Selección Directa" />
+              <MenuItem mnemonicParsing="false" onAction="#filtroBubbleSort" text="Burbuja" />
+                  <MenuItem mnemonicParsing="false" onAction="#filtroInsertionSort" text="Inserción" />
+                  <MenuItem mnemonicParsing="false" onAction="#startQuickSort" text="QuickSort" />
+                  <MenuItem mnemonicParsing="false" onAction="#startSeleccion" text="Selección Directa" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Búsqueda">
             <items>
-              <MenuItem mnemonicParsing="false" text="Secuencial" />
-                  <MenuItem mnemonicParsing="false" text="Binaria" />
+                  <MenuItem mnemonicParsing="false" onAction="#insertarDato" text="Insertar dato" />
+              <MenuItem mnemonicParsing="false" onAction="#startBusqueda" text="Secuencial" />
+                  <MenuItem mnemonicParsing="false" onAction="#busquedaBinaria" text="Binaria" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Ayuda">
@@ -38,8 +39,14 @@
         </menus>
       </MenuBar>
       <TextArea fx:id="txtDisplay" editable="false" layoutX="21.0" layoutY="44.0" prefHeight="264.0" prefWidth="111.0" />
-      <TextArea editable="false" layoutX="157.0" layoutY="44.0" prefHeight="264.0" prefWidth="111.0" />
-      <Label layoutX="21.0" layoutY="318.0" text="Tipo de Dato:" />
+      <TextArea fx:id="txtOrdenado" editable="false" layoutX="157.0" layoutY="44.0" prefHeight="264.0" prefWidth="111.0" />
       <Label fx:id="labelTDato" layoutX="104.0" layoutY="318.0" prefHeight="17.0" prefWidth="72.0" />
+      <Pane fx:id="paneBusqueda" layoutX="18.0" layoutY="318.0" prefHeight="80.0" prefWidth="246.0">
+         <children>
+            <Label layoutX="14.0" layoutY="18.0" text="Buscar:" />
+            <TextField fx:id="tfDato" layoutX="56.0" layoutY="14.0" prefHeight="25.0" prefWidth="47.0" />
+            <Label fx:id="labelOutput" layoutX="15.0" layoutY="39.0" prefHeight="37.0" prefWidth="227.0" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

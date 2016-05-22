@@ -3,7 +3,6 @@ package sorts;
 public class bubbleSort {
 
     public static void main(String[] args) {
-
             int []arreglo = {1,43,52,512,56,89,10};
             int aux;
             boolean cambios = false; //bandera para verificar si hubo cambios  en el arreglo
